@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "117357697009",
+    "project_id": "simplex-65f30",
+    "storage_bucket": "simplex-65f30.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117357697009:android:56834c1c61c12e7856d650",
+        "android_client_info": {
+          "package_name": "chat.echo.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAV9b616TABRwVD7JYWHchagOMzuieNhs0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

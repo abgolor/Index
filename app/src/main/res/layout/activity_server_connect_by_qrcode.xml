@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ServerConnectByQRCodeActivity">
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Add via QRCode"
+      android:fontFamily="@font/inter_semi_bold"
+      android:textColor="@color/black"
+      android:textAlignment="center"
+      android:layout_marginTop="15dp"/>
+
+  <androidx.camera.view.PreviewView
+      android:id="@+id/connect_server_qr_code"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="50dp"
+      android:layout_weight="1"/>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:text="Scan a server QRCode to save the connection server"
+      android:fontFamily="@font/inter_semi_bold"
+      android:textColor="@color/black"
+      android:textAlignment="center"
+      android:layout_marginTop="15dp"
+      android:layout_marginBottom="50dp"/>
+
+</LinearLayout>

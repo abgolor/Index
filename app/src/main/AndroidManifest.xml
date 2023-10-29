@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="chat.echo.app">
+
+  <uses-feature android:name="android.hardware.camera" />
+
+  <uses-permission android:name="android.permission.CAMERA" />
+  <uses-permission android:name="android.permission.VIDEO_CAPTURE" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO" />
+  <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+  <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+  <uses-permission android:name="android.permission.VIBRATE" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+  <uses-permission
+      android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+      tools:ignore="ScopedStorage" />
+  <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+  <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+  <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+  <queries>
+    <package android:name="org.sufficientlysecure.keychain" />
+    <package android:name="org.sufficientlysecure.keychain.debug" />
+    <package android:name="com.whatsapp" />
+    <package android:name="com.whatsapp.w4b" />
+  </queries>
+
+  <application
+      android:name=".SimplexApp"
+      android:allowBackup="true"
+      android:extractNativeLibs="${extract_native_libs}"
+      android:icon="@mipmap/ic_index"
+      android:label="${app_name}"
+      android:supportsRtl="true"
+      android:theme="@style/Theme.SimpleX"
+      tools:replace="android:icon,android:theme">
+    <activity
+        android:name=".TwoAppPasswordActivity"
+        android:exported="false" />
+    <!-- Main activity -->
+    <activity
+        android:name=".MainActivity"
+        android:exported="true"
+        android:label="${app_name}"
+        android:launchMode="singleTask"
+        android:theme="@style/Theme.SimpleX"
+        android:windowSoftInputMode="adjustResize">
+      <intent-filter>
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+
+      <!-- open simplex:/ connection URI -->
+      <intent-filter>
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:scheme="simplex" />
+      </intent-filter>
+      <intent-filter android:autoVerify="true">
+        <action android:name="android.intent.action.VIEW" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+        <category android:name="android.intent.category.BROWSABLE" />
+
+        <data android:scheme="http" />
+        <data android:scheme="https" />
+        <data android:host="simplex.chat" />
+        <data android:pathPrefix="/invitation" />
+        <data android:pathPrefix="/contact" />
+      </intent-filter>
+      <!-- Receive files from other apps -->
+      <intent-filter>
+        <action android:name="android.intent.action.SEND" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+
+        <data android:mimeType="*/*" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="android.intent.action.SEND_MULTIPLE" />
+
+        <category android:name="android.intent.category.DEFAULT" />
+
+        <data android:mimeType="image/*" />
+      </intent-filter>
+    </activity>
+
+    <activity-alias
+        android:name=".MainActivity_youtube"
+        android:enabled="false"
+        android:exported="true"
+        android:icon="@mipmap/ic_youtube"
+        android:label="YouTube"
+        android:targetActivity=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
+    <activity-alias
+        android:name=".MainActivity_pornhub"
+        android:enabled="false"
+        android:exported="true"
+        android:icon="@mipmap/ic_pornhub"
+        android:label="Pornhub"
+        android:targetActivity=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
+    <activity-alias
+        android:name=".MainActivity_tiktok"
+        android:enabled="false"
+        android:exported="true"
+        android:icon="@mipmap/ic_tiktok"
+        android:label="Tiktok"
+        android:targetActivity=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
+    <activity-alias
+        android:name=".MainActivity_facebook"
+        android:enabled="false"
+        android:exported="true"
+        android:icon="@mipmap/ic_facebook"
+        android:label="Facebook"
+        android:targetActivity=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
+    <activity-alias
+        android:name=".MainActivity_netflix"
+        android:enabled="false"
+        android:exported="true"
+        android:icon="@mipmap/ic_netflix"
+        android:label="Netflix"
+        android:targetActivity=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
+    <activity-alias
+        android:name=".MainActivity_deliveroo"
+        android:enabled="false"
+        android:exported="true"
+        android:icon="@mipmap/ic_deliveroo"
+        android:label="Deliveroo"
+        android:targetActivity=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
+    <activity-alias
+        android:name=".MainActivity_default"
+        android:enabled="true"
+        android:exported="true"
+        android:icon="@mipmap/ic_index"
+        android:targetActivity=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
+    <activity-alias
+        android:name=".MainActivity_dark_blue"
+        android:enabled="false"
+        android:exported="true"
+        android:icon="@mipmap/ic_index"
+        android:targetActivity=".MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity-alias>
+
+    <activity
+        android:name=".views.call.IncomingCallActivity"
+        android:showOnLockScreen="true" />
+
+    <provider
+        android:name="androidx.core.content.FileProvider"
+        android:authorities="${provider_authorities}"
+        android:exported="false"
+        android:grantUriPermissions="true">
+      <meta-data
+          android:name="android.support.FILE_PROVIDER_PATHS"
+          android:resource="@xml/file_paths" />
+    </provider> <!-- NtfManager action processing (buttons in notifications) -->
+    <receiver
+        android:name=".model.NtfManager$NtfActionReceiver"
+        android:enabled="true"
+        android:exported="false" /> <!-- SimplexService foreground service -->
+    <service
+        android:name=".SimplexService"
+        android:enabled="true"
+        android:exported="false"
+        android:stopWithTask="false" /> <!-- SimplexService restart on reboot -->
+    <receiver
+        android:name=".SimplexService$StartReceiver"
+        android:enabled="true"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+      </intent-filter>
+    </receiver> <!-- SimplexService restart on destruction -->
+    <receiver
+        android:name=".SimplexService$AutoRestartReceiver"
+        android:enabled="true"
+        android:exported="false" />
+  </application>
+
+</manifest>

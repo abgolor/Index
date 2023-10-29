@@ -1,0 +1,7 @@
+# ninja log v5
+0	246	1675929791	CMakeFiles/app-lib.dir/simplex-api.c.o	322dead914cf3da4
+0	270	1675930000	CMakeFiles/app-lib.dir/simplex-api.c.o	322dead914cf3da4
+0	256	1675930153	CMakeFiles/app-lib.dir/simplex-api.c.o	322dead914cf3da4
+4	497	1675931485	CMakeFiles/app-lib.dir/simplex-api.c.o	322dead914cf3da4
+497	1148	1675931486	/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/build/intermediates/cxx/Debug/384j1b6j/obj/arm64-v8a/libapp-lib.so	ec39ea316c0b9d74
+0	291	1675931720	CMakeFiles/app-lib.dir/simplex-api.c.o	322dead914cf3da4

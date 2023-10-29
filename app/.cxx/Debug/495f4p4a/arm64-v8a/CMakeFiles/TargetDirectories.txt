@@ -1,0 +1,3 @@
+/Users/abgolor/AndroidStudioProjects/index/app/.cxx/Debug/495f4p4a/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/abgolor/AndroidStudioProjects/index/app/.cxx/Debug/495f4p4a/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/abgolor/AndroidStudioProjects/index/app/.cxx/Debug/495f4p4a/arm64-v8a/CMakeFiles/app-lib.dir

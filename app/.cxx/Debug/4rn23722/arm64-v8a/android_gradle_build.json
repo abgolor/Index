@@ -1,0 +1,46 @@
+{
+  "buildFiles": [
+    "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/src/main/cpp/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/abgolor/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+      "-C",
+      "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/.cxx/Debug/4rn23722/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/abgolor/Library/Android/sdk/cmake/3.18.1/bin/ninja",
+    "-C",
+    "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/.cxx/Debug/4rn23722/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "app-lib::@6890427a1f51a3e7e1df": {
+      "toolchain": "toolchain",
+      "abi": "arm64-v8a",
+      "artifactName": "app-lib",
+      "output": "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/build/intermediates/cxx/Debug/4rn23722/obj/arm64-v8a/libapp-lib.so",
+      "runtimeFiles": [
+        "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/src/main/cpp/libs/arm64-v8a/libsimplex.so",
+        "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/src/main/cpp/libs/arm64-v8a/libsupport.so",
+        "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/src/main/cpp/libs/arm64-v8a/libcrypto.so",
+        "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/src/main/cpp/libs/arm64-v8a/libssl.so",
+        "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/src/main/cpp/libs/arm64-v8a/capi.so",
+        "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/src/main/cpp/libs/arm64-v8a/padlock.so",
+        "/Users/abgolor/AndroidStudioProjects/simplex-chat-working/apps/android/app/src/main/cpp/libs/arm64-v8a/libgmp.so"
+      ]
+    }
+  },
+  "toolchains": {
+    "toolchain": {
+      "cCompilerExecutable": "/Users/abgolor/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang",
+      "cppCompilerExecutable": "/Users/abgolor/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}
